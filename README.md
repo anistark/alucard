@@ -1,4 +1,4 @@
-# gitinfo
+# [Alucard][1]
 
 Info about github repo specific details
 
@@ -6,7 +6,8 @@ Info about github repo specific details
 
 ```
  npm install
- cp routes/config_demos.js routes/config.js
+ cp server/config_example.js server/config.js
+ cp config_example.js config.js
 ```
 
 ## Run the application:
@@ -22,3 +23,6 @@ or if nodemon is installed:
 ```
 
 For more info mail me at anirudhastark@yahoo.com
+
+
+[1]: http://alucard.anirudha.org
