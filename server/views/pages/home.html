@@ -7,14 +7,20 @@
 <div class="wrapper">
     <div class="container">
         <h1>{{ title }}</h1>
-
         <form class="form">
-            <input type="text" placeholder="Github username: anistark">
+            {% if Object.keys(git_data).length > 0 %}
+                {% if git_data.username.length > 0 %}
+                    <input type="text" placeholder="Github username: anistark" name="handle" id="handle" value="{{ git_data.username }}">
+                {% else %}
+                    <input type="text" placeholder="Github username: anistark" name="handle" id="handle" value="">
+                {% endif %}
+            {% else %}
+                <input type="text" placeholder="Github username: anistark" name="handle" id="handle" value="">
+            {% endif %}
             <!--<button type="submit" id="login-button">Get Info</button>-->
             <button type="submit" id="login-button" class="fa fa-arrow-circle-right fa-3x"></button>
         </form>
     </div>
-
     <ul class="bg-bubbles">
         <li></li>
         <li></li>
@@ -27,9 +33,9 @@
         <li></li>
         <li></li>
     </ul>
-    {% if Object.keys(req.query).length > 0 %}
+    {% if Object.keys(git_data).length > 0 %}
     <div class="response-display" id="response-display">
-        Display here
+        {{ git_data }}
     </div>
     {% endif %}
 </div>

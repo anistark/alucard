@@ -12,6 +12,10 @@ $("#login-button").click(function(event){
   event.preventDefault();
   $('form').fadeOut(500);
   $('.wrapper').addClass('form-success');
+  //console.log(window.location.href.slice(window.location.href.indexOf('?')));
+  var gotoUrl = window.location.href.split('?')[0]+'?github_handle='+$("#handle").val();
+  console.log(gotoUrl);
+  window.location.assign(gotoUrl);
 });
 
 
