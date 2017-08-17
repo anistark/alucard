@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
   //$("#response-display").hide();
-  console.log('Thank You for visiting Alucard!');
+  console.log('Thank You for using Alucard!');
   //if(getParameterByName('github_handle')) {
   //  $("#response-display").show();
   //}

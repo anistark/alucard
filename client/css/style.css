@@ -10,6 +10,7 @@ body {
     color: white;
     font-weight: 300;
 }
+
 body ::-webkit-input-placeholder {
     /* WebKit browsers */
     font-family: 'Source Sans Pro', sans-serif;
@@ -52,7 +53,7 @@ body :-ms-input-placeholder {
 }
 .container {
     margin: 0 auto;
-    padding: 80px 0;
+    /*padding: 80px 0;*/
     text-align: center;
 }
 .container h1 {
@@ -228,6 +229,97 @@ form button:hover {
 }
 
 .response-display {
-    margin: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    /*border: 1px solid rgba(255, 255, 255, 0.4);*/
+}
+
+/* Profile Display */
+.profile-picture {
+    border-radius: 50%;
+    position: relative;
+    bottom: 50%;
+    left: 50%;
+    max-width: 150px;
+    opacity: 1;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+}
+
+/* Profile_data table */
+table {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.responsive {
+    width: 100%;
+    border-collapse: collapse;
+}
+/*.responsive tr:nth-of-type(odd) {*/
+    /*background: #eee;*/
+/*}*/
+.responsive th {
+    font-weight: bold;
+    /*background: #333;*/
+    color: white;
+}
+.responsive th, .responsive td {
+    text-align: left;
+    padding: 6px;
+}
+@media only screen and (max-width: 640px) {
+    .frame {
+        padding: 20px;
+    }
+    .responsive, .responsive thead, .responsive tbody, .responsive th, .responsive td, .responsive tr {
+        display: block;
+    }
+    .responsive {
+        border-top: 1px solid #bbb;
+        border-left: 1px solid #bbb;
+        border-right: 1px solid #bbb;
+    }
+    .responsive thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .responsive td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+    .responsive td:nth-of-type(4) {
+        border-bottom: 0;
+    }
+    .responsive tr {
+        border-bottom: 1px solid #bbb;
+    }
+    .responsive td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .responsive td:nth-of-type(1):before {
+        content: "NDC";
+    }
+    .responsive td:nth-of-type(2):before {
+        content: "DESCRIPTION";
+    }
+    .responsive td:nth-of-type(3):before {
+        content: "ABC";
+    }
+    .responsive td:nth-of-type(4):before {
+        content: "CARDINAL";
+    }
 }

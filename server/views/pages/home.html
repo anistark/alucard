@@ -35,7 +35,10 @@
     </ul>
     {% if Object.keys(git_data).length > 0 %}
     <div class="response-display" id="response-display">
-        {{ git_data }}
+        <img src="{{ git_data.data.avatar_url }}" alt="profile-picture" class="profile-picture"/>
+        <h2>{{ git_data.data.name }} </h2>
+        <small>{{ git_data.data.bio }}</small>
+        {% include '../components/profile_data.html' %}
     </div>
     {% endif %}
 </div>
