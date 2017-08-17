@@ -1,0 +1,37 @@
+{% extends '../layout.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="container">
+        <h1>{{ title }}</h1>
+
+        <form class="form">
+            <input type="text" placeholder="Github username: anistark">
+            <!--<button type="submit" id="login-button">Get Info</button>-->
+            <button type="submit" id="login-button" class="fa fa-arrow-circle-right fa-3x"></button>
+        </form>
+    </div>
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    {% if Object.keys(req.query).length > 0 %}
+    <div class="response-display" id="response-display">
+        Display here
+    </div>
+    {% endif %}
+</div>
+
+{% endblock %}

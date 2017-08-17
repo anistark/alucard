@@ -5,14 +5,15 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('gitinfo:server');
+var debug = require('debug')('_example:server');
 var http = require('http');
+var Config = require('../../config');
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(Config.server.port);
 app.set('port', port);
 
 /**
@@ -87,4 +88,5 @@ function onListening() {
     ? 'pipe ' + addr
     : 'port ' + addr.port;
   debug('Listening on ' + bind);
+  console.log('Listening on ' + bind);
 }
