@@ -104,7 +104,7 @@ exports.getRepoData = function(data, cb) {
                 // console.log('allRepoLang', allRepoLang, allRepoLangs[allRepoLang]);
                 if (allRepoLang == 'null') {
                     allRepoLangStructured.push({
-                        'label': 'UnDetermined',
+                        'label': '-',
                         'value': allRepoLangs[allRepoLang]
                     })
                 }

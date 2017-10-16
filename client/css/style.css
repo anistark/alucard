@@ -327,3 +327,7 @@ table {
 .detail-data {
     margin-top: 1rem;
 }
+
+.repository-detail {
+    float: right;
+}
