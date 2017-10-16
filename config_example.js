@@ -25,5 +25,9 @@ module.exports = {
     },
     newRelic: {
         licenseKey: process.env.newRelicLicenseKey || ''
+    },
+    github: {
+        githubAPIClientId: '',
+        githubAPIClientSecret: ''
     }
 };

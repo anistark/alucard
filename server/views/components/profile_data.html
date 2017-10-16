@@ -1,26 +1,20 @@
-<table>
-    <tr>
-        <td width="640" class="frame">
-            <table class="responsive">
-                <tbody>
-                <tr>
-                    <td>Public Repositories</td>
-                    <td>{{git_data.data.public_repos}}</td>
-                </tr>
-                <tr>
-                    <td>Public Gists</td>
-                    <td>{{git_data.data.public_gists}}</td>
-                </tr>
-                <tr>
-                    <td>Followers</td>
-                    <td>{{git_data.data.followers}}</td>
-                </tr>
-                <tr>
-                    <td>Following</td>
-                    <td>{{git_data.data.following}}</td>
-                </tr>
-                </tbody>
-            </table>
-        </td>
-    </tr>
-</table>
+<div class="detail-data repositories">
+    <h2>Repositories</h2>
+    Total Public Repositories: <strong>{{git_data.data.public_repos}}</strong>
+    {% include './repository_detail.html' %}
+</div>
+<div class="detail-data followers">
+    <h2>Followers</h2>
+    Total Followers: <strong>{{git_data.data.followers}}</strong>
+    {% include './follower_detail.html' %}
+</div>
+<div class="detail-data following">
+    <h2>Following</h2>
+    Total Following: <strong>{{git_data.data.following}}</strong>
+    {% include './following_detail.html' %}
+</div>
+<div class="detail-data gists">
+    <h2>Gists</h2>
+    Total Public Gists: <strong>{{git_data.data.public_gists}}</strong>
+    {% include './gists_detail.html' %}
+</div>

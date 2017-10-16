@@ -1,5 +1,9 @@
 var helpers = require('./server/helpers');
 
 console.log('=============> Test Starts <=============');
-//helpers.citiesData();
+data = {
+    'url': 'https://api.github.com/users/anistark/repos',
+    'totalRepoCount': '164'
+}
+helpers.getRepoData(data);
 console.log('==============> Test Ends <==============');

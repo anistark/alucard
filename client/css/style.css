@@ -45,7 +45,7 @@ body :-ms-input-placeholder {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: scroll;
 }
 .wrapper.form-success .container h1 {
     -webkit-transform: translateY(2rem);
@@ -322,4 +322,8 @@ table {
     .responsive td:nth-of-type(4):before {
         content: "CARDINAL";
     }
+}
+
+.detail-data {
+    margin-top: 1rem;
 }
